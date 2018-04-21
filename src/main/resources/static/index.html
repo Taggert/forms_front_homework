@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login/Register</title>
+	<style>
+		form{
+			horiz-align: center;
+		}
+		fieldset {
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			width: fit-content;
+			text-align: right;
+		}
+		label{
+			float: left;
+		}
+		legend{
+			text-align: left;
+		}
+
+	</style>
+</head>
+<body>
+<form action="http://localhost:9000/users/save" target="source">
+	<fieldset id="login">
+		<legend>Login</legend>
+		<label for="username">Username: </label>
+		<input id="username" name="username" type="text" autofocus placeholder="Enter your login..."><br>
+		<label for="password">Paasword: </label>
+		<input id="password" name="password" type="password" placeholder="Enter your password..."><br>
+		<label for="showpass">Show password</label>
+		<input id="showpass" type="checkbox" name="shwps" onclick="showPassword()">
+		<button>Login</button>
+		<button type="reset">Reset</button><br><br>
+		<button type="button" style="width: 150px"><a href="http://localhost:9000/users/all" target="source">All users</a></button>
+	</fieldset>
+</form><br>
+<iframe width="50%" ; name="source">Homer happy</iframe>
+<script>
+	function showPassword() {
+		if(showpass.checked == true){
+		    password.type="text"
+		}else{
+		    password.type="password"
+		}
+    }
+</script>
+</body>
+</html>
